@@ -1,0 +1,44 @@
+/* Intro Text */
+
+h2 {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Body */
+
+body {
+    background-color: #BBB5B5;
+}
+
+.container {
+    background-color: white;
+    border: 2px solid #898585;
+    border-radius: 5px;
+    height: 400px;
+    padding: 30px;
+}
+
+/* Start of Game */
+
+h3 {
+    margin: 20px 0px;
+    text-align: center;
+}
+
+.btn-div {
+    margin: auto;
+    width: 50%;
+}
+
+.btn {
+    margin: 20px;
+    width: 42%;
+}
+
+.ent-btn {
+    background-color: #F2ADF6;
+    border-color: #F2ADF6;
+}
+
+/* Question Screen */
