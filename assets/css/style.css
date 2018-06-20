@@ -1,6 +1,8 @@
 /* Intro Text */
 
 h2 {
+    font-family: "Shrikhand", "Times New Roman", sans-serif;
+    font-size: 3em;
     padding: 50px;
     text-align: center;
 }
@@ -8,20 +10,21 @@ h2 {
 /* Body */
 
 body {
-    background-color: #BBB5B5;
+    background: url("../images/background.jpg");
 }
 
 .container {
     background-color: white;
     border: 2px solid #898585;
     border-radius: 5px;
-    height: 400px;
+    height: 500px;
     padding: 30px;
 }
 
 /* Start of Game */
 
 h3 {
+    font-family: "Indie Flower", "Times New Roman", sans-serif;
     margin: 20px 0px;
     text-align: center;
 }
@@ -44,5 +47,13 @@ h3 {
     display: block;
     margin: 0 auto;
     margin-top: 15px;
-    width: 30%;
+    width: 40%;
+}
+
+.restart-btn {
+    height: 75px;
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
+    margin: 20px;
+    width: 40%;
 }

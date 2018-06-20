@@ -249,15 +249,27 @@ $(document).ready(function(){
         iterateQuestion();
     });
 
-    /* Function used to begin a new question */
+    /* Function used to begin a new question 
+        If the user has encountered 10 questions,
+            Show the statistics and end the game.
+            Give the user the option to restart.
+        Else
+            Give a random question index.
+            If the question has already been shown
+                Continue to find a suitable index.
+            Else
+                Show a new question and push its index into the array.
+     */
     function iterateQuestion() {
-        if (questions == 2){
+        if (questions == 10){
             $(".container").empty();
             $(".container").html(
                 "<h3> Correct: " + numCorrect + " </h3>" +
                 "<h3> Wrong: " + numWrong + " </h3>" +
                 "<h3> Unanswered: " + numUnans + " </h3>" +
-                "<button class='btn btn-info restart-btn'> RESTART </button>"
+                "<div class='btn-div'>" +
+                    "<button class='btn btn-info restart-btn'> RESTART </button>" +
+                "</div>"
             );
         }
         else {
@@ -276,9 +288,11 @@ $(document).ready(function(){
         }
     }
 
-    /* Function used to create the format for a new question and set the timer. */
+    /* Function used to create the format for a new question and set the timer. 
+        Give the user 10 seconds to answer the question.
+     */
     var newQuestion = function(randomNum, list) {
-        timer = 30;
+        timer = 10;
 
         $(".container").empty();
         $(".container").html(
@@ -294,7 +308,10 @@ $(document).ready(function(){
         timerInterval = setInterval(decrementCounter, 1000); 
     }
 
-    /* Function for when question has been answered or the question's time has run out. */
+    /* Function for when question has been answered or the question's time has run out. 
+        Change the corresponding message depending on how the question has been answered.
+        Give the user 3 seconds to see what he got wrong.
+     */
     var endOfQuestion = function(qStatus){
         var postMessage;
 
@@ -312,7 +329,7 @@ $(document).ready(function(){
                 break;
         }
 
-        timer = 5;
+        timer = 3;
         $(".container").empty();
         $(".container").html(
             "<h3 id='timer'> " + timer + " </h3>" +
@@ -343,7 +360,7 @@ $(document).ready(function(){
     function decrementCounter(){
         timer = --timer;
         $('#timer').text(timer);
-        if (timer == 20 && status == "begin"){
+        if (timer == 0 && status == "begin"){
             numUnans = ++ numUnans;
             endOfQuestion("unans");
         }
