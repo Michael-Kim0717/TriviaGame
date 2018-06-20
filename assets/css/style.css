@@ -27,18 +27,22 @@ h3 {
 }
 
 .btn-div {
-    margin: auto;
-    width: 50%;
+    text-align: center;
 }
 
-.btn {
+.begin-btn {
+    height: 75px;
+    font-size: 1.5em;
+    letter-spacing: 0.3em;
     margin: 20px;
-    width: 42%;
-}
-
-.ent-btn {
-    background-color: #F2ADF6;
-    border-color: #F2ADF6;
+    width: 40%;
 }
 
 /* Question Screen */
+
+.btn-primary {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 30%;
+}
