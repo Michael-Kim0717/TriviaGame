@@ -1,8 +1,8 @@
 /* Intro Text */
 
 h2 {
-    font-family: "Shrikhand", "Times New Roman", sans-serif;
-    font-size: 3em;
+    font-family: "Cabin Sketch", "Times New Roman", sans-serif;
+    font-size: 4.5em;
     padding: 50px;
     text-align: center;
 }
@@ -14,7 +14,8 @@ body {
 }
 
 .container {
-    background-color: white;
+    background: url("../images/container_background.jpg") no-repeat;
+    background-size: cover;
     border: 2px solid #898585;
     border-radius: 5px;
     height: 500px;
@@ -24,7 +25,8 @@ body {
 /* Start of Game */
 
 h3 {
-    font-family: "Indie Flower", "Times New Roman", sans-serif;
+    font-family: "Gaegu", "Times New Roman", sans-serif;
+    font-weight: bold;
     margin: 20px 0px;
     text-align: center;
 }
@@ -56,4 +58,169 @@ h3 {
     letter-spacing: 0.3em;
     margin: 20px;
     width: 40%;
+}
+
+@media (min-width: 768px){
+    /* Start of Game */
+    .start-text {
+        color: red;
+        line-height: 2.5em;
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        position: relative;
+        top: 22px;
+        width: 70%;
+    }
+
+    /* Questions */
+    #timer {
+        bottom: 23px;
+        font-size: 40px;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .question-text {
+        bottom: 15px;
+        line-height: 1.3em;
+        margin: 0 auto;
+        position: relative;
+        width: 80%;
+    }
+
+    .btn-primary {
+        width: 80%;
+    }
+
+    /* Post Questions */
+    #post-message {
+        bottom: 12px;
+        position: relative;
+    }
+
+    /* Results Screen */
+    #correct {
+        position: relative;
+        top: 20px;
+    }
+    
+    #incorrect {
+        position: relative;
+        top: 35px;
+    }
+
+    #unanswered {
+        margin-bottom: 100px;
+        position: relative;
+        top: 50px;
+    }
+}
+
+@media (min-width: 992px){
+    .start-text {
+        color: yellow;
+        line-height: 3.3em;
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 25px;
+        position: relative;
+        top: -5px;
+        width: 50%;
+    }
+
+    #timer {
+        bottom: 5px;
+        font-size: 40px;
+        font-weight: bold;
+        position: relative;
+    }  
+    
+    .question-text {
+        bottom: 20px;
+        line-height: 1.6em;
+        margin: 0 auto;
+        position: relative;
+        width: 60%;
+    }
+
+    .btn-primary {
+        width: 50%;
+    }
+    
+    #post-message {
+        bottom: 18px;
+        position: relative;
+    }
+
+    #correct {
+        position: relative;
+        top: 5px;
+    }
+    
+    #incorrect {
+        position: relative;
+        top: 43px;
+    }
+
+    #unanswered {
+        margin-bottom: 120px;
+        position: relative;
+        top: 80px;
+    }
+}
+
+@media (min-width: 1200px){
+    .start-text {
+        color: green;
+        line-height: 2em;
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 60px;
+        position: relative;
+        top: 25px;
+        width: 40%;
+    }
+
+    #timer {
+        bottom: -10px;
+        font-size: 40px;
+        font-weight: bold;
+        position: relative;
+    }  
+    
+    .question-text {
+        bottom: 5px;
+        line-height: 2.1em;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        position: relative;
+        width: 80%;
+    }
+
+    .btn-primary {
+        width: 30%;
+    }
+    
+    #post-message {
+        bottom: -5px;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    #correct {
+        position: relative;
+        top: 20px;
+    }
+    
+    #incorrect {
+        position: relative;
+        top: 20px;
+    }
+
+    #unanswered {
+        margin-bottom: 50px;
+        position: relative;
+        top: 20px;
+    }
 }

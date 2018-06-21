@@ -261,12 +261,12 @@ $(document).ready(function(){
                 Show a new question and push its index into the array.
      */
     function iterateQuestion() {
-        if (questions == 10){
+        if (questions == 2){
             $(".container").empty();
             $(".container").html(
-                "<h3> Correct: " + numCorrect + " </h3>" +
-                "<h3> Wrong: " + numWrong + " </h3>" +
-                "<h3> Unanswered: " + numUnans + " </h3>" +
+                "<h3 id='correct'> Correct: " + numCorrect + " </h3>" +
+                "<h3 id='incorrect'> Wrong: " + numWrong + " </h3>" +
+                "<h3 id='unanswered'> Unanswered: " + numUnans + " </h3>" +
                 "<div class='btn-div'>" +
                     "<button class='btn btn-info restart-btn'> RESTART </button>" +
                 "</div>"
@@ -297,7 +297,7 @@ $(document).ready(function(){
         $(".container").empty();
         $(".container").html(
             "<h3 id='timer'> " + timer + " </h3>" + 
-            "<h3> " + list[randomNum].question + " </h3>" +
+            "<h3 class='question-text'> " + list[randomNum].question + " </h3>" +
             "<div class='btn-div'>" +
                 "<button class='btn btn-primary' id='choice1'> " + list[randomNum].choices[0] + "</button>" +
                 "<button class='btn btn-primary' id='choice2'> " + list[randomNum].choices[1] + "</button>" +
@@ -333,7 +333,7 @@ $(document).ready(function(){
         $(".container").empty();
         $(".container").html(
             "<h3 id='timer'> " + timer + " </h3>" +
-            "<h3> " + postMessage + " </h3> " +
+            "<h3 id='post-message'> " + postMessage + " </h3> " +
             "<div class='btn-div'>" +
                 "<button class='btn btn-primary' id='choice1' disabled> " + questionList[randomNumQ].choices[0] + "</button>" +
                 "<button class='btn btn-primary' id='choice2' disabled> " + questionList[randomNumQ].choices[1] + "</button>" +
