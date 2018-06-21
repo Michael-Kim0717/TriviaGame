@@ -95,10 +95,10 @@ var questionList = [{question: "Which African country shares a border with Chad?
             {question: "How tall was Yao Ming?", choices: ["7 feet 4 inches", "7 feet 6 inches", "6 feet 1 inches", "5 feet 3 inches"], cAnswer: "7 feet 6 inches"},
             {question: "What is one common fitness tracer brand?", choices: ["Fit-ness", "Walkalot", "Fitbit", "Walkalong"], cAnswer: "Fitbit"},
             {question: "Which is not a piece of equipment used for riding horses?", choices: ["Saddle", "Pulley", "Bridle", "Girth"], cAnswer: "Pulley"},
-            {question: "test", choices: ["a", "b", "c", "d"], cAnswer: "b"},
-            {question: "test", choices: ["a", "b", "c", "d"], cAnswer: "b"},
-            {question: "test", choices: ["a", "b", "c", "d"], cAnswer: "b"},
-            {question: "test", choices: ["a", "b", "c", "d"], cAnswer: "b"},
+            {question: "Who won the 2016 team olympics in gymnastics?", choices: ["United States", "China", "Japan", "Russia"], cAnswer: "United States"},
+            {question: "How do you win in volleyball?", choices: ["Score 25 points", "Score 25 points and be ahead by 2 points", "Until one team quits", "Play 25 rounds and be ahead by 2 points"], cAnswer: "Score 25 points and be ahead by 2 points"},
+            {question: "In between which two periods does football have Halftime?", choices: ["1 & 2", "2 & 3", "3 & 4", "All of them"], cAnswer: "2 & 3"},
+            {question: "How many points do you get for a safety in football?", choices: ["4", "2", "1", "0"], cAnswer: "2"},
             {question: "What theatre was Hamilton first shown in?", choices: ["Private Bank Theatre", "Richard Rogers Theatre", "Public Theatre", "Broadway Theatre"], cAnswer: "Public Theatre"},
             {question: "What is the poem 'O Captain My Captain' about?", choices: ["A captain and his crew", "Abraham Lincoln's death", "A prize", "How to captain a ship"], cAnswer: "Abraham Lincoln's death"},
             {question: "Which instrument is a single reeded instrument?", choices: ["Trumpet", "Basoon", "Oboe", "Clarinet"], cAnswer: "Clarinet"},
@@ -261,7 +261,7 @@ $(document).ready(function(){
                 Show a new question and push its index into the array.
      */
     function iterateQuestion() {
-        if (questions == 2){
+        if (questions == 10){
             $(".container").empty();
             $(".container").html(
                 "<h3 id='correct'> Correct: " + numCorrect + " </h3>" +
@@ -313,6 +313,8 @@ $(document).ready(function(){
         Give the user 3 seconds to see what he got wrong.
      */
     var endOfQuestion = function(qStatus){
+        clearInterval(timerInterval);
+
         var postMessage;
 
         switch(qStatus){
@@ -330,6 +332,7 @@ $(document).ready(function(){
         }
 
         timer = 3;
+        timerInterval = setInterval(decrementCounter, 1000); 
         $(".container").empty();
         $(".container").html(
             "<h3 id='timer'> " + timer + " </h3>" +

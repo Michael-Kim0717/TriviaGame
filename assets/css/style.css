@@ -22,6 +22,28 @@ body {
     padding: 30px;
 }
 
+.eraser {
+    bottom: 115px;
+    left: 155px;
+    position: absolute;
+    width: 6em;
+
+    -ms-transform: rotate(130deg); /* IE 9 */
+    -webkit-transform: rotate(130deg); /* Safari */
+    transform: rotate(130deg);
+}
+
+.pencil {
+    bottom: 150px;
+    position: absolute;
+    right: 75px;
+    width: 20em;
+
+    -ms-transform: rotate(-10deg); /* IE 9 */
+    -webkit-transform: rotate(30deg); /* Safari */
+    transform: rotate(20deg);
+}
+
 /* Start of Game */
 
 h3 {
@@ -63,7 +85,6 @@ h3 {
 @media (min-width: 768px){
     /* Start of Game */
     .start-text {
-        color: red;
         line-height: 2.5em;
         position: relative;
         margin: 0 auto;
@@ -119,7 +140,6 @@ h3 {
 
 @media (min-width: 992px){
     .start-text {
-        color: yellow;
         line-height: 3.3em;
         position: relative;
         margin: 0 auto;
@@ -172,7 +192,6 @@ h3 {
 
 @media (min-width: 1200px){
     .start-text {
-        color: green;
         line-height: 2em;
         position: relative;
         margin: 0 auto;
